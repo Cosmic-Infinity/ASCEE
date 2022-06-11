@@ -8,21 +8,36 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class ASCEE {
-    private static boolean inversion = true;
-    private static int compressionfactor = 5;
+    private static boolean inversion = false;
+    private static int compressionfactor = 3;
     private static char strLOW[] = {'@','%','#','*','+','=','-',':','.',' '};
     private static char str[] = {'$','@','B','%','8','&','W','M','#','*','o','a','h','b','d','p','q','w','m','Z','O','0','L','C','J','U','Y','X','z','c','v','u','n','x','r','j','f','t','/',(char)92,'(',')','1','{','}','[',']','?','-','+','~','<','>','i','!','l',';',':',',','"','^',(char)39,'.',' '};
-    
-    
-    
-    public static void main(String args[]) throws IOException
-    {
 
+    private static BufferedImage image;
+    private static int width;
+    private static int height;
+
+    public static void main(String args[]) throws IOException {
+        
+        initialise();
+        load();
+        scale();
+        decolour();
+        art();
+        printsample();
+        
+        System.out.println("Ready.");
+    }
+    
+    private static void initialise(){
         BufferedImage image = null;
-        int width = 0;
-        int height = 0;
-
+        width = 0;
+        height = 0;
+    }
+    
+    private static void load()throws IOException{
         //load
+        System.out.println("Loadig Image...");
         try {
             File input = new File("C:/Users/Infinity/Desktop/image.png");
             image = ImageIO.read(input);
@@ -32,8 +47,12 @@ public class ASCEE {
         catch (IOException e) {
             System.out.println("Error: " + e);
         }
+        System.out.println("Image loaded.");
+    }
 
+    private static void scale(){
         //scaleing
+        System.out.println("Scaling.");
         int scalefactor = 1;
         scalefactor = ((Math.max(width,height)/750)*compressionfactor);
         if(scalefactor<1)
@@ -41,8 +60,12 @@ public class ASCEE {
         else{
             image = scale(image, width/scalefactor, height/scalefactor);
         }
+        System.out.println("Finished Scaling.");
+    }
 
+    private static void decolour(){
         //decolouring
+        System.out.println("Decolouring.");
         width = image.getWidth();
         height = image.getHeight();
         for(int y = 0; y<height; y++){
@@ -57,10 +80,15 @@ public class ASCEE {
                 image.setRGB(x, y, p);
             }
         }
-        
+        System.out.println("Finished decolouring.");
+    }
+
+    private static void art() throws IOException {
         //create text file
         File textascii = new File("C:/Users/Infinity/Desktop/ascii.txt");
+        System.out.println("Text file created.");
         //creating ascii
+        System.out.println("Creating ASCII Art...");
         String s = "";
         for(int y = 0; y<height; y++){
 
@@ -73,14 +101,23 @@ public class ASCEE {
             }
             s=s+"\n";
         }
-        //write text file
-        Files.writeString(Path.of("C:/Users/Infinity/Desktop/ascii.txt"),s);
+        System.out.println("Finished creating.");
 
+        try{
+            //write text file
+            Files.writeString(Path.of("C:/Users/Infinity/Desktop/ascii.txt"),s);
+        }catch (IOException e) {
+            System.out.println("Error: " + e);
+        }
+        System.out.println("Finished writing.");
+    }
+
+    private static void printsample(){
         //image output sample
         try {
             File output_file = new File("C:/Users/Infinity/Desktop/imageCOMPLETE.png");
             ImageIO.write(image, "png", output_file);
-            System.out.println("Writing complete.");
+            System.out.println("Image printed.");
         }
         catch (IOException e) {
             System.out.println("Error: " + e);
