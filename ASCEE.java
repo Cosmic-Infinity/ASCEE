@@ -8,18 +8,23 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 
 public class ASCEE {
-    private static boolean inversion = false; //inverts the black and white colour space.
-    private static short compressionfactor = 5; // higher the number, smaller the ascii art.
-    private static byte mode = 1; // 1 = high bit depth mode. 2 = low bit depth mode
-    
-    private static char strLOW[] = {'@','%','#','*','+','=','-',':','.',' '};
-    private static char str[] = {'$','@','B','%','8','&','W','M','#','*','o','a','h','b','d','p','q','w','m','Z','O','0','L','C','J','U','Y','X','z','c','v','u','n','x','r','j','f','t','/',(char)92,'(',')','1','{','}','[',']','?','-','+','~','<','>','i','!','l',';',':',',','"','^',(char)39,'.',' '};
+    //user exposed variables
+    private static boolean inversion = true; //inverts the black and white colour space.
+    private static float compressionfactor = 4f; // higher the number, smaller the ascii art.
+    private static byte mode = 2; // 1 = high bit depth mode. 2 = low bit depth mode
 
-    
-    
+    //lookup constants
+    private static final char strLOW[] = {'@','%','#','*','+','=','-',':','.',' '};
+    private static final char str[] = {'$','@','B','%','8','&','W','M','#','*','o','a','h','b','d','p','q','w','m','Z','O','0','L','C','J','U','Y','X','z','c','v','u','n','x','r','j','f','t','/',(char)92,'(',')','1','{','}','[',']','?','-','+','~','<','>','i','!','l',';',':',',','"','^',(char)39,'.',' '};
+
+    //working variables. used by program
     private static BufferedImage image;
     private static int width;
     private static int height;
+    private static String ext;
+
+    //non exposed variable. meant for developer use
+    private static int scaledownConstant = 600;
 
     public static void main(String args[]) throws IOException {
 
@@ -37,6 +42,7 @@ public class ASCEE {
         BufferedImage image = null;
         width = 0;
         height = 0;
+        ext = "";
     }
 
     private static void load()throws IOException{
@@ -44,7 +50,24 @@ public class ASCEE {
         System.out.println("Loadig Image...");
         try {
 
-            File input = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "image.png");
+            File input = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "image.jpg");
+            ext = ".jpg";
+            if(!(input.exists())){
+                input = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "image.jpeg");
+                ext = ".jpeg";
+            }
+            if(!(input.exists())){
+                input = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "image.png");
+                ext = ".png";
+            }
+            if(!(input.exists())){
+                input = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "image.gif");
+                ext = ".gif";
+            }if(!(input.exists())){
+                System.out.println("No image file with name \"image\" found.\nNOTE: Only JPG/JPEG, PNG and GIF is supported.");
+                System.exit(1);
+            }
+            //File input = new File(System.getProperty("user.dir") + File.separator + "image.webp");
             image = ImageIO.read(input);
             width = image.getWidth();
             height = image.getHeight();
@@ -58,12 +81,12 @@ public class ASCEE {
     private static void scale(){
         //scaleing
         System.out.println("Scaling.");
-        int scalefactor = 1;
-        scalefactor = ((Math.max(width,height)/750)*compressionfactor);
+        float scalefactor = 1;
+        scalefactor = ((Math.max(width,height)/scaledownConstant)*compressionfactor);
         if(scalefactor<1)
             image = scale(image, width, height);
         else{
-            image = scale(image, width/scalefactor, height/scalefactor);
+            image = scale(image, (int)(width/scalefactor), (int)(height/scalefactor));
         }
         System.out.println("Finished Scaling.");
     }
@@ -131,7 +154,7 @@ public class ASCEE {
     private static void printsample(){
         //image output sample
         try {
-            File output_file = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "imageCOMPLETE.png");
+            File output_file = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "imageCOMPLETE" + ext);
             ImageIO.write(image, "png", output_file);
             System.out.println("Image printed.");
         }
