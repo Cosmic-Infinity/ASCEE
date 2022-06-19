@@ -60,7 +60,7 @@ What? You want more? Alright alright. See those variables in the code? Not all o
   
 ⦿ `boolean inversion` : flag used to invert the colour space. Set it `ture` and the black and white will invert.
   
-⦿ `int compressionfactor` : Determines how much smaller the ascii art should be. Higher the numbe = more the compression = smaller the ascii art. Images have a lot of pixels, all of them can't be used for character based art. Therefore I also don't recommend setting this number to 1. Trust me, you don't wanna wait for 90 seconds to get your image out.
+⦿ `int compressionfactor` : Determines how much smaller the ascii art should be. Higher the numbe = more the compression = smaller the ascii art. Images have a lot of pixels, all of them can't be used for character based art. Therefore I also don't recommend setting this number to 1. Trust me, you don't wanna wait for 90 seconds to get your image out. (Range : 1 to 10, maybe? it's not hardcoded, so go nuts)
   
 ⦿ `byte mode` : This generator comes with 2 modes. `high` and `low` bit depth, determined by `1 or 2`. Based on your preference or the image, one might give more pleasing result than the other.
 
