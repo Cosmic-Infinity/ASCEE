@@ -67,7 +67,8 @@ public class ASCEE {
                 System.out.println("No image file with name \"image\" found.\nNOTE: Only JPG/JPEG, PNG and GIF is supported.");
                 System.exit(1);
             }
-            //File input = new File(System.getProperty("user.dir") + File.separator + "image.webp");
+            //File input = new File(System.getProperty("user.home") + File.separator + "Desktop" + File.separator + "image.jpg");
+            //File input = new File(System.getProperty("user.dir") + File.separator + "image.jpg");
             image = ImageIO.read(input);
             width = image.getWidth();
             height = image.getHeight();
