@@ -1,7 +1,9 @@
 # ASCEE
 
+Ah yes, ASCII, the great grandfather of Unicode, the first chapter of any computer book, the source of so many security vulnerabilities (well, unicode is to blame, but who's reading this anyways), and a way of creating sick art? Yes, <a href="https://wikipedia.org/wiki/ASCII_art" target="blank">ASCII Art is a thing</a>. And long before images on computers, ascii art was all you could get, all 7 bits of it.
 
-Creating ASCII Art is hard. And let's face it, hardly anyone is creating them by hand these days _(No offense to the one who do)_. So here's an simple _"tool"_ to do just that.
+
+Creating ASCII Art is hard. And let's face it, hardly anyone is creating them by hand these days _(No offense to the one 0.01%)_. So here's simple _"tool"_ to do just that.
 ### _Say hello to ASCEE._
 
 
@@ -9,9 +11,9 @@ Creating ASCII Art is hard. And let's face it, hardly anyone is creating them by
 
 ## **Why?**
 
-Just because I can goddmnit. I was bored, okay? It was a slow Friday afternoon. Had this idea to turn images into ASCII Art, so I did it. Now I'm not ashamed to admit yes, I may have had some help from stackexchange, but that's besides the point. 😘
+Just because I can goddamnit. I was bored, okay? It was a slow Friday afternoon. Had this idea to turn images into ASCII art, so I did it. Now I'm not ashamed to admit that I may have had some help from stackexchange, but that's besides the point. 😘
 
-Cut me some slack, it was cleaned up and rewritten over the weekend and I may be be writing this _introduction_ a week from then, so don't mind my messy code, I tried my best.
+It was cleaned up and rewritten over the weekend and I may or may not be be writing this _introduction_ a week from then, so don't mind the messy code, I tried my best. Cut me some slack.
 
 
 <br/>
@@ -28,7 +30,7 @@ Cut me some slack, it was cleaned up and rewritten over the weekend and I may be
 3. Once the processing is done, you'll see a new file on you desktop named `ascii.txt` which will contain your result.
 
 
-NOTE : Based on image size, compression parameter, you PC's general peerformance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
+NOTE : Based on image size, compression parameter, you PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
 
 <br/>
 <img align = "left" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
@@ -53,10 +55,10 @@ Finished. Done Processing.
 ## **How do I boogie some more?**
 
 
-What? You want more? Alright alright. See those variables in the code? Not all of them are meant to be touched. DO NOT TOUCH THEM ALL. Though you may touch these<p align="center">
+What? You want more? Alright alright. See those variables in the code? Not all of them are meant to be touched. **DO NOT TOUCH THEM ALL**. Though you may touch these<p align="center">
 
   
-⦿ `boolean inversion` : flag used to invert the colour space. Set it `ture` and the black and white will inversion.
+⦿ `boolean inversion` : flag used to invert the colour space. Set it `ture` and the black and white will invert.
   
 ⦿ `int compressionfactor` : Determines how much smaller the ascii art should be. Higher the numbe = more the compression = smaller the ascii art. Images have a lot of pixels, all of them can't be used for character based art. Therefore I also don't recommend setting this number to 1. Trust me, you don't wanna wait for 90 seconds to get your image out.
   
