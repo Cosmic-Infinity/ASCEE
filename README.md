@@ -30,7 +30,7 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 3. Once the processing is done, you'll see a new file on you desktop named `ascii.txt` which will contain your result.
 
 
-NOTE : Based on image size, compression parameter, you PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
+NOTE : Based on image size, compression parameter, your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
 
 <br/>
 <img align = "left" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
@@ -66,7 +66,7 @@ What? You want more? Alright alright. See those variables in the code? Not all o
 
 ⦿ It is not recommended to play around with working variables or lookup constants unless you know exactly what you're doing.
   
-⦿ Non-exposed variable can be tweaked if you're feeling adventurous. `int scaledownConstant` scales down every image by a particular amount before the main scaling process runs. Too small a number can lead thigher processing time. But you do you.
+⦿ Non-exposed variable can be tweaked if you're feeling adventurous. `int scaledownConstant` scales down every image by a particular amount before the main scaling process runs. Too small a number can lead higher processing time. But you do you.
 
 
 
