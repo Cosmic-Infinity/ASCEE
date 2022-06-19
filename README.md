@@ -20,7 +20,9 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 
 ## **How do I boogie?**
 
-1. Just `download/copy` over the code over to a new `.java` file and run it.
+
+
+1. Just `download/copy` the code over to a new `.java` file. Done? Now read step 2.
 2. Make sure you have an image file on the `Desktop` named `image` or else you'll get this lovely error. (Supported format : `.jpg` , `.jpeg` , `.png` , `.gif` (animation data is ignored))
 
 <p align="center">
@@ -30,7 +32,23 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 3. Once the processing is done, you'll see a new file on you desktop named `ascii.txt` which will contain your result.
 
 
-NOTE : Based on image size, compression parameter, your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
+
+<br/>
+
+## For your own sanity.
+
+**Windows Notepad has difficulty opening large text files**, for some unknown reason. Or maybe windows just hates my program implementation in particular. If your ascii art output looks like complete gibbrish, try using <a href="https://notepad-plus-plus.org/downloads/" target="blank">Notepad++</a>. Oh and also, remember to zoom out on the text `Ctrl + mouse scroll`
+
+
+<p align="center">
+<img width="295" alt="Screenshot 2022-06-20 010601" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
+<br clear="left">
+I did not type that crap. Notepad did.
+</p>
+
+<br/>
+Based on image size, compression parameter, your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
+
 
 <br/>
 <img align = "left" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
@@ -42,7 +60,7 @@ NOTE : Based on image size, compression parameter, your PC's general performance
 <br clear="left">
 <p aligh="left">
  <br/>
-Not finished. Still Processing
+
 </p>
 
 
