@@ -40,34 +40,31 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 **Windows Notepad has difficulty opening large text files**, for some unknown reason. Or maybe windows just hates my program implementation in particular. If your ascii art output looks like complete gibbrish, try using <a href="https://notepad-plus-plus.org/downloads/" target="blank">Notepad++</a>. Oh and also, remember to zoom out on the text `Ctrl + mouse scroll`
 
 
+
+
+
 <p align="center">
 <img width="295" alt="Screenshot 2022-06-20 010601" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
-<br clear="left">
-I did not type that crap. Notepad did.
+</br clear="left">I did not type that crap. Notepad did.
 </p>
 
 <br/>
 Based on image size, compression parameter, your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
 
 
+
+<table align="center" border=0>
+<th><img align = "center" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
+</br clear="left">Sill Processing.
+</th>
+<th>
+<img align = "center" width="206" alt="Screenshot 2022-06-19 154800" src="https://user-images.githubusercontent.com/64971616/174476338-029e8930-2803-4a91-ada1-5dc3cb989dcf.png">
+</br clear="left">Finished. Done Processing.
+</th>
+</tr>
+</table>
 <br/>
-<img align = "left" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
-<br/>
 
-<img align = "right" width="206" alt="Screenshot 2022-06-19 154800" src="https://user-images.githubusercontent.com/64971616/174476338-029e8930-2803-4a91-ada1-5dc3cb989dcf.png">
-<br/>
-
-<br clear="left">
-<p aligh="left">
- <br/>
-
-</p>
-
-
-<br clear="right"/>
-<p align="right">
-Finished. Done Processing.
-</p>
 
 
 ## **How do I boogie some more?**
