@@ -59,7 +59,7 @@ Based on image size, compression parameter, your PC's general performance, proce
 </th>
 <th>
 <img align = "center" width="206" alt="Screenshot 2022-06-19 154800" src="https://user-images.githubusercontent.com/64971616/174476338-029e8930-2803-4a91-ada1-5dc3cb989dcf.png">
-</br clear="left">Finished. Done Processing.
+</br clear="left">Finished processing.
 </th>
 </tr>
 </table>
