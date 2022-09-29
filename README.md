@@ -51,7 +51,7 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 <br/>
 Based on image size, compression parameter, your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
 
-
+</br>
 
 <table align="center" border=0>
 <th><img align = "center" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
@@ -64,7 +64,6 @@ Based on image size, compression parameter, your PC's general performance, proce
 </tr>
 </table>
 <br/>
-
 
 
 ## **How do I boogie some more?**
