@@ -11,7 +11,7 @@ Creating ASCII Art is hard. And let's face it, hardly anyone is creating them by
 
 ## **Why?**
 
-Just because I can goddamnit. I was bored, okay? It was a slow Friday afternoon. Had this idea to turn images into ASCII art, so I did it. Now I'm not ashamed to admit that I may have had some help from stackexchange, but that's besides the point. 😘
+Just because I can. It was a slow Friday afternoon, and I was bored. Had this idea to turn images into ASCII art, so here it is. Now I'm not ashamed to admit that I may have had some help from stackexchange, but that's besides the point. 😘
 
 It was cleaned up and rewritten over the weekend and I may or may not be be writing this _introduction_ a week from then, so don't mind the messy code, I tried my best. Cut me some slack.
 
@@ -22,11 +22,11 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 
 
 
-1. Just `download/copy` the code over to a new `.java` file. Done? Now read step 2.
+1. Just `download/copy` the code over to a new `.java` file and run it.
 2. Make sure you have an image file on the `Desktop` named `image` or else you'll get this lovely error. (Supported format : `.jpg` , `.jpeg` , `.png` , `.gif` (animation data is ignored))
 
 <p align="center">
-<img width="383" alt="Screenshot 2022-06-19 150752" src="https://user-images.githubusercontent.com/64971616/174474841-5b9b1478-2a4e-4d2e-8bd8-b8b560b5e8f1.png">
+<img width="383" alt="Sample Error" src="https://user-images.githubusercontent.com/64971616/174474841-5b9b1478-2a4e-4d2e-8bd8-b8b560b5e8f1.png">
 </p>
 
 3. Once the processing is done, you'll see a new file on you desktop named `ascii.txt` which will contain your result.
@@ -44,26 +44,32 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 
 
 <p align="center">
-<img width="295" alt="Screenshot 2022-06-20 010601" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
-</br clear="left">I did not type that crap. Notepad did.
+<img width="295" alt="Crap" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
+</br clear="left">_I did not type that crap_
 </p>
 
 <br/>
-Based on image size, compression parameter, and  your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
+Based on image size, compression parameter, and  your PC's general performance, processing may take time. Processing is finished when **READY** is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
 
-</br>
+
+<br/>
+
 
 <table align="center" border=0>
-<th><img align = "center" width="208" alt="Screenshot 2022-06-19 154634" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
-</br clear="left">Sill Processing.
-</th>
-<th>
-<img align = "center" width="206" alt="Screenshot 2022-06-19 154800" src="https://user-images.githubusercontent.com/64971616/174476338-029e8930-2803-4a91-ada1-5dc3cb989dcf.png">
-</br clear="left">Finished processing.
-</th>
+<tr>
+<th><img align = "center" width="208" alt="Processing" src="https://user-images.githubusercontent.com/64971616/174476287-fd24ab02-5c4b-413e-9310-3a2678d36dc7.png">
+  </br clear="left">Sill Processing.</th>
+<th><img align = "center" width="206" alt="Ready" src="https://user-images.githubusercontent.com/64971616/174476338-029e8930-2803-4a91-ada1-5dc3cb989dcf.png">
+  </br clear="left">Finished processing.</th>
 </tr>
 </table>
 <br/>
+
+Talking about processing, you'll noice that the program isn't multithread. That's because I do not know multithreading. LOL. So don't be alarmed if you see things like this <3
+<p align="center">
+<img width="490" alt="Brrrrrrr" src="https://user-images.githubusercontent.com/64971616/206483092-0b544314-1470-41f0-aeb8-1444e698a068.png">
+</br clear="left">_Thread 2 go BRRRRRRRRR_
+</p>
 
 ## **Samples**
 
@@ -79,7 +85,7 @@ Based on image size, compression parameter, and  your PC's general performance, 
 
 <tr>
 <th><img  width="336" align = "center" alt="Input" src="https://user-images.githubusercontent.com/64971616/206464053-b2df1755-639c-4c0b-b4ec-490f291c62e0.png">
-</br clear="left">Input Image</th></th>
+</br clear="left">Input Image</th>
 <th><img width="336" alt="Output Normal" src="https://user-images.githubusercontent.com/64971616/206464602-2186a0b1-905e-406c-84cb-52673b115013.png">
 </br clear="left">ASCII Output</th>
 <th><img width="336" alt="Output Inverted" src="https://user-images.githubusercontent.com/64971616/206465009-d59fd490-7693-43ff-9d28-ea05f676ab7e.png">
@@ -88,7 +94,7 @@ Based on image size, compression parameter, and  your PC's general performance, 
 
 <tr>
 <th><img width="358" align = "center" alt="Input" src="https://user-images.githubusercontent.com/64971616/206466434-7fbc1aa6-aa6e-41ab-987b-112e993de5ce.jpg">
-</br clear="left">Input Image</th></th>
+</br clear="left">Input Image</th>
 <th><img width="358" alt="Output High" src="https://user-images.githubusercontent.com/64971616/206466758-ee60af38-627d-40b4-8b0e-6606f6a7c4d5.png">
 </br clear="left">ASCII High Bit-Depth</th>
 <th><img width="358" alt="Output Low" src="https://user-images.githubusercontent.com/64971616/206467165-498f6425-e800-4c16-a490-797a8a9d6659.png">
@@ -99,13 +105,15 @@ Based on image size, compression parameter, and  your PC's general performance, 
 
 _Siz_, _Scale_, _Amount of Detail_, everything can be controlled by modifying the in-built variables.
 
+</br>
 
 ## **How do I boogie some more?**
 
 
-What? You want more? Alright alright. See those variables in the code? Not all of them are meant to be touched. **DO NOT TOUCH THEM ALL**. Though you may touch these<p align="center">
+What? You want more? Alright alright. See those variables in the code? Not all of them are meant to be touched. **DO NOT TOUCH THEM ALL**. Though you may touch these
 
-  
+
+
 ⦿ `boolean inversion` : flag used to invert the colour space. Set it `ture` and the black and white will invert.
   
 ⦿ `int compressionfactor` : Determines how much smaller the ascii art should be. Higher the numbe = more the compression = smaller the ascii art. Images have a lot of pixels, all of them can't be used for character based art. Therefore I also don't recommend setting this number to 1. Trust me, you don't wanna wait for 90 seconds to get your image out. (Range : 1 to 10, maybe? it's not hardcoded, so go nuts)
