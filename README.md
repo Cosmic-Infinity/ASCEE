@@ -49,7 +49,7 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 </p>
 
 <br/>
-Based on image size, compression parameter, your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
+Based on image size, compression parameter, and  your PC's general performance, processing may take time. Processing is finished when `Ready` is displayed on the terminal. Do not be alarmed if it's taking time. Although if you're not playing around with the parameters too drastically, it's unlikely you'll have to wait.
 
 </br>
 
@@ -65,6 +65,26 @@ Based on image size, compression parameter, your PC's general performance, proce
 </table>
 <br/>
 
+## **Samples**
+
+<table align="center" border=0>
+<tr>
+<th><img align = "center" colspan="2" width="325" alt="Input" src="https://user-images.githubusercontent.com/64971616/206462921-641f9d32-3185-4f27-935c-2aee1681514c.png"></br clear="left">Input Image</th>
+<th><img width="325" alt="Output" src="https://user-images.githubusercontent.com/64971616/206462363-792d45df-9e02-4336-a549-46ed730b0c34.png"></br clear="left">ASCII Output</th>
+</tr>
+<tr>
+<th><img align = "center" width="336" alt="Input" src="https://user-images.githubusercontent.com/64971616/206464053-b2df1755-639c-4c0b-b4ec-490f291c62e0.png"></br clear="left">Input Image</th></th>
+<th><img width="336" alt="Output Normal" src="https://user-images.githubusercontent.com/64971616/206464602-2186a0b1-905e-406c-84cb-52673b115013.png"></br clear="left">ASCII Output</th>
+<th><img width="336" alt="Output Inverted" src="https://user-images.githubusercontent.com/64971616/206465009-d59fd490-7693-43ff-9d28-ea05f676ab7e.png"></br clear="left">ASCII Output Inverted</th>
+</tr>
+<tr>
+<th><img width="358" align = "center" alt="Input" src="https://user-images.githubusercontent.com/64971616/206466434-7fbc1aa6-aa6e-41ab-987b-112e993de5ce.jpg"></br clear="left">
+Input Image</th></th>
+<th><img width="358" alt="Output High" src="https://user-images.githubusercontent.com/64971616/206466758-ee60af38-627d-40b4-8b0e-6606f6a7c4d5.png" </br clear="left">ASCII High Bit-Depth</th>
+<th><img width="358" alt="Output Low" src="https://user-images.githubusercontent.com/64971616/206467165-498f6425-e800-4c16-a490-797a8a9d6659.png"></br clear="left">ASCII Low Bit-Depth</th>
+</tr>
+
+</table>
 
 ## **How do I boogie some more?**
 
