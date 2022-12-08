@@ -44,8 +44,8 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 
 
 <p align="center">
-<img width="295" alt="Crap" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
-</br clear="left">_I did not type that crap_
+<img width="295" alt="Erroneous Processing" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
+</br clear="left">I did not type that crap
 </p>
 
 <br/>
@@ -68,7 +68,7 @@ Based on image size, compression parameter, and  your PC's general performance, 
 Talking about processing, you'll noice that the program isn't multithread. That's because I do not know multithreading. LOL. So don't be alarmed if you see things like this <3
 <p align="center">
 <img width="490" alt="Brrrrrrr" src="https://user-images.githubusercontent.com/64971616/206483092-0b544314-1470-41f0-aeb8-1444e698a068.png">
-</br clear="left">_Thread 2 go BRRRRRRRRR_
+</br clear="left">Thread 2 go BRRRRRRRRR
 </p>
 
 ## **Samples**
