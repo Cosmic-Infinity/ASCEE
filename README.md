@@ -96,7 +96,9 @@ Based on image size, compression parameter, and  your PC's general performance, 
 </tr>
 
 </table>
-Size, Scale, Amount of Detail, everything can be controlled by modifying the in-built variables.
+
+_Siz_, _Scale_, _Amount of Detail_, everything can be controlled by modifying the in-built variables.
+
 
 ## **How do I boogie some more?**
 
