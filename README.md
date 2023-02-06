@@ -45,7 +45,7 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 
 <p align="center">
 <img width="295" alt="Erroneous Processing" src="https://user-images.githubusercontent.com/64971616/174497531-08e956a4-bed0-406f-a209-068ac2267f00.png">
-</br clear="left">I did not type that crap
+</br clear="left">I did not type that
 </p>
 
 <br/>
@@ -103,7 +103,7 @@ Talking about processing, you'll noice that the program isn't multithread. That'
 
 </table>
 
-_Siz_, _Scale_, _Amount of Detail_, everything can be controlled by modifying the in-built variables.
+_Size_, _Scale_, _Amount of Detail_, everything can be controlled by modifying the in-built variables.
 
 </br>
 
