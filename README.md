@@ -1,6 +1,6 @@
 # ASCEE
 
-Ah yes, ASCII, the great grandfather of Unicode, the first chapter of any computer book, the source of so many security vulnerabilities (well, unicode is to blame, but who's reading this anyways), and a way of creating sick art? Yes, <a href="https://wikipedia.org/wiki/ASCII_art" target="blank">ASCII Art is a thing</a>. And long before images on computers, ascii art was all you could get, all 7 bits of it.
+Ah yes, ASCII, the great grandfather of Unicode, the first chapter of any computer book, the source of so many security vulnerabilities (unicode is to blame, but who's reading this anyways), and a way of creating sick art? Yes, <a href="https://wikipedia.org/wiki/ASCII_art" target="blank">ASCII Art is a thing</a>. And long before images on computers, ascii art was all you could get, all 7 bits of it.
 
 
 Creating ASCII Art is hard. And let's face it, hardly anyone is creating them by hand these days _(No offense to the one 0.01%)_. So here's simple _"tool"_ to do just that.
