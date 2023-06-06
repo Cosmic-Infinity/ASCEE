@@ -37,7 +37,7 @@ It was cleaned up and rewritten over the weekend and I may or may not be be writ
 
 ## For your own sanity.
 
-**Windows Notepad has difficulty opening large text files**, for some unknown reason. Or maybe windows just hates my program implementation in particular. If your ascii art output looks like complete gibbrish, try using <a href="https://notepad-plus-plus.org/downloads/" target="blank">Notepad++</a>. Oh and also, remember to zoom out on the text `Ctrl + mouse scroll`
+**Windows Notepad has difficulty recognising character encoding at times**. Or maybe windows just hates my program implementation in particular. If your ascii art output looks like complete gibbrish, try using <a href="https://notepad-plus-plus.org/downloads/" target="blank">Notepad++</a>. Oh and also, remember to zoom out on the text `Ctrl + mouse scroll`
 
 
 
