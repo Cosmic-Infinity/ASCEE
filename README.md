@@ -65,7 +65,7 @@ Based on image size, compression parameter, and  your PC's general performance, 
 </table>
 <br/>
 
-Talking about processing, you'll noice that the program isn't multithread. That's because I do not know multithreading. LOL. So don't be alarmed if you see things like this <3
+Talking about processing, you'll noice that the program isn't multithread. That's because I do not know multithreading. LOL. Don't be alarmed if you see things like this
 <p align="center">
 <img width="490" alt="Brrrrrrr" src="https://user-images.githubusercontent.com/64971616/206483092-0b544314-1470-41f0-aeb8-1444e698a068.png">
 </br clear="left">Thread 2 go BRRRRRRRRR
