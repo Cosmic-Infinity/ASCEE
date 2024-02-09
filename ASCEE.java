@@ -9,14 +9,16 @@ import java.nio.file.Path;
 
 public class ASCEE {
     //user exposed variables
-    private static boolean inversion = true; //inverts the black and white colour space.
+    private static boolean inversion = false; //inverts the black and white colour space.
     private static float compressionfactor = 4f; // higher the number, smaller the ascii art.
     private static byte mode = 2; // 1 = high bit depth mode. 2 = low bit depth mode
 
     //lookup constants
     private static final char strLOW[] = {'@','%','#','*','+','=','-',':','.',' '};
-    private static final char str[] = {'$','@','B','%','8','&','W','M','#','*','o','a','h','b','d','p','q','w','m','Z','O','0','L','C','J','U','Y','X','z','c','v','u','n','x','r','j','f','t','/',(char)92,'(',')','1','{','}','[',']','?','-','+','~','<','>','i','!','l',';',':',',','"','^',(char)39,'.',' '};
+    //private static final char str[] = {'$','@','B','%','8','&','W','M','#','*','o','a','h','b','d','p','q','w','m','Z','O','0','L','C','J','U','Y','X','z','c','v','u','n','x','r','j','f','t','/',(char)92,'(',')','1','{','}','[',']','?','-','+','~','<','>','i','!','l',';',':',',','"','^',(char)39,'.',' '};
 
+    private static final char str[] = {'$' ,'$' ,'$' ,'$' ,'@' ,'@' ,'@' ,'@' ,'B' ,'B' ,'B' ,'B' ,'%' ,'%' ,'%' ,'%' ,'8' ,'8' ,'8' ,'8' ,'&' ,'&' ,'&' ,'&' ,'W' ,'W' ,'W' ,'W' ,'M' ,'M' ,'M' ,'M' ,'#' ,'#' ,'#' ,'#' ,'*' ,'*' ,'*' ,'*' ,'o' ,'o' ,'o' ,'o' ,'a' ,'a' ,'a' ,'a' ,'h' ,'h' ,'h' ,'h' ,'b' ,'b' ,'b' ,'b' ,'d' ,'d' ,'d' ,'d' ,'p' ,'p' ,'p' ,'p' ,'q' ,'q' ,'q' ,'q' ,'w' ,'w' ,'w' ,'w' ,'m' ,'m' ,'m' ,'m' ,'Z' ,'Z' ,'Z' ,'Z' ,'O' ,'O' ,'O' ,'O' ,'0' ,'0' ,'0' ,'0' ,'L' ,'L' ,'L' ,'L' ,'C' ,'C' ,'C' ,'C' ,'J' ,'J' ,'J' ,'J' ,'U' ,'U' ,'U' ,'U' ,'Y' ,'Y' ,'Y' ,'Y' ,'X' ,'X' ,'X' ,'X' ,'z' ,'z' ,'z' ,'z' ,'c' ,'c' ,'c' ,'c' ,'v' ,'v' ,'v' ,'v' ,'u' ,'u' ,'u' ,'u' ,'n' ,'n' ,'n' ,'n' ,'x' ,'x' ,'x' ,'x' ,'r' ,'r' ,'r' ,'r' ,'j' ,'j' ,'j' ,'j' ,'f' ,'f' ,'f' ,'f' ,'t' ,'t' ,'t' ,'t' ,'/' ,'/' ,'/' ,'/' ,(char)92 ,(char)92,(char)92,(char)92 ,'(' ,'(' ,'(' ,'(' ,')' ,')' ,')' ,')' ,'1' ,'1' ,'1' ,'1' ,'{' ,'{' ,'{' ,'{' ,'}' ,'}' ,'}' ,'}' ,'[' ,'[' ,'[' ,'[' ,']' ,']' ,']' ,']' ,'?' ,'?' ,'?' ,'?' ,'-' ,'-' ,'-' ,'-' ,'+' ,'+' ,'+' ,'+' ,'~' ,'~' ,'~' ,'~' ,'<' ,'<' ,'<' ,'<' ,'>' ,'>' ,'>' ,'>' ,'i' ,'i' ,'i' ,'i' ,'!' ,'!' ,'!' ,'!' ,'l' ,'l' ,'l' ,'l' ,';' ,';' ,';' ,';' ,':' ,':' ,':' ,':' ,',' ,',' ,',' ,',' ,'"' ,'"' ,'"' ,'"' ,'^' ,'^' ,'^' ,'^' ,(char)39 ,(char)39 ,(char)39 ,(char)39 ,'.' ,'.' ,'.' ,'.' ,' ' ,' ' ,' ' ,' '};
+    private static final char strinv[] = {' ' ,' ' ,' ' ,' ' ,'.' ,'.' ,'.' ,'.' ,(char)39 ,(char)39 ,(char)39 ,(char)39 ,'^' ,'^' ,'^' ,'^' ,'"' ,'"' ,'"' ,'"' ,',' ,',' ,',' ,',' ,':' ,':' ,':' ,':' ,';' ,';' ,';' ,';' ,'l' ,'l' ,'l' ,'l' ,'!' ,'!' ,'!' ,'!' ,'i' ,'i' ,'i' ,'i' ,'>' ,'>' ,'>' ,'>' ,'<' ,'<' ,'<' ,'<' ,'~' ,'~' ,'~' ,'~' ,'+' ,'+' ,'+' ,'+' ,'-' ,'-' ,'-' ,'-' ,'?' ,'?' ,'?' ,'?' ,']' ,']' ,']' ,']' ,'[' ,'[' ,'[' ,'[' ,'}' ,'}' ,'}' ,'}' ,'{' ,'{' ,'{' ,'{' ,'1' ,'1' ,'1' ,'1' ,')' ,')' ,')' ,')' ,'(' ,'(' ,'(' ,'(' ,(char)92 ,(char)92 ,(char)92 ,(char)92 ,'/' ,'/' ,'/' ,'/' ,'t' ,'t' ,'t' ,'t' ,'f' ,'f' ,'f' ,'f' ,'j' ,'j' ,'j' ,'j' ,'r' ,'r' ,'r' ,'r' ,'x' ,'x' ,'x' ,'x' ,'n' ,'n' ,'n' ,'n' ,'u' ,'u' ,'u' ,'u' ,'v' ,'v' ,'v' ,'v' ,'c' ,'c' ,'c' ,'c' ,'z' ,'z' ,'z' ,'z' ,'X' ,'X' ,'X' ,'X' ,'Y' ,'Y' ,'Y' ,'Y' ,'U' ,'U' ,'U' ,'U' ,'J' ,'J' ,'J' ,'J' ,'C' ,'C' ,'C' ,'C' ,'L' ,'L' ,'L' ,'L' ,'0' ,'0' ,'0' ,'0' ,'O' ,'O' ,'O' ,'O' ,'Z' ,'Z' ,'Z' ,'Z' ,'m' ,'m' ,'m' ,'m' ,'w' ,'w' ,'w' ,'w' ,'q' ,'q' ,'q' ,'q' ,'p' ,'p' ,'p' ,'p' ,'d' ,'d' ,'d' ,'d' ,'b' ,'b' ,'b' ,'b' ,'h' ,'h' ,'h' ,'h' ,'a' ,'a' ,'a' ,'a' ,'o' ,'o' ,'o' ,'o' ,'*' ,'*' ,'*' ,'*' ,'#' ,'#' ,'#' ,'#' ,'M' ,'M' ,'M' ,'M' ,'W' ,'W' ,'W' ,'W' ,'&' ,'&' ,'&' ,'&' ,'8' ,'8' ,'8' ,'8' ,'%' ,'%' ,'%' ,'%' ,'B' ,'B' ,'B' ,'B' ,'@' ,'@' ,'@' ,'@' ,'$' ,'$' ,'$' ,'$'};
     //working variables. used by program
     private static BufferedImage image;
     private static int width;
@@ -24,7 +26,7 @@ public class ASCEE {
     private static String ext;
 
     //non exposed variable. meant for developer use
-    private static int scaledownConstant = 600;
+    private static int scaledownConstant = 400; //(this also determines the tolerence for small images. Lower the number, lesser will be the tolerence for skipping scaledwon process of small images)
 
     public static void main(String args[]) throws IOException {
 
@@ -166,265 +168,10 @@ public class ASCEE {
 
     private static char decideHIGH(double g){
         if(inversion){
-            if (g >= 252) 
-                return str[0];
-            else if (g >= 248) 
-                return str[1];
-            else if (g >= 244) 
-                return str[2];
-            else if (g >= 240) 
-                return str[3];
-            else if (g >= 236) 
-                return str[4];
-            else if (g >= 232) 
-                return str[5];
-            else if (g >= 228) 
-                return str[6];
-            else if (g >= 224) 
-                return str[7];
-            else if (g >= 220) 
-                return str[8];
-            else if (g >= 216) 
-                return str[9];
-            else if (g >= 212) 
-                return str[10];
-            else if (g >= 208) 
-                return str[11];
-            else if (g >= 204) 
-                return str[12];
-            else if (g >= 200) 
-                return str[13];
-            else if (g >= 196) 
-                return str[14];
-            else if (g >= 192) 
-                return str[15];
-            else if (g >= 188) 
-                return str[16];
-            else if (g >= 184) 
-                return str[17];
-            else if (g >= 180) 
-                return str[18];
-            else if (g >= 176) 
-                return str[19];
-            else if (g >= 172) 
-                return str[20];
-            else if (g >= 168) 
-                return str[21];
-            else if (g >= 164) 
-                return str[22];
-            else if (g >= 160) 
-                return str[23];
-            else if (g >= 156) 
-                return str[24];
-            else if (g >= 152) 
-                return str[25];
-            else if (g >= 148) 
-                return str[26];
-            else if (g >= 144) 
-                return str[27];
-            else if (g >= 140) 
-                return str[28];
-            else if (g >= 136) 
-                return str[29];
-            else if (g >= 132) 
-                return str[30];
-            else if (g >= 128) 
-                return str[31];
-            else if (g >= 124) 
-                return str[32];
-            else if (g >= 120) 
-                return str[33];
-            else if (g >= 116) 
-                return str[34];
-            else if (g >= 112) 
-                return str[35];
-            else if (g >= 108) 
-                return str[36];
-            else if (g >= 104) 
-                return str[37];
-            else if (g >= 100) 
-                return str[38];
-            else if (g >= 96) 
-                return str[39];
-            else if (g >= 92) 
-                return str[40];
-            else if (g >= 88) 
-                return str[41];
-            else if (g >= 84) 
-                return str[42];
-            else if (g >= 80) 
-                return str[43];
-            else if (g >= 76) 
-                return str[44];
-            else if (g >= 72) 
-                return str[45];
-            else if (g >= 68) 
-                return str[46];
-            else if (g >= 64) 
-                return str[47];
-            else if (g >= 60) 
-                return str[48];
-            else if (g >= 56) 
-                return str[49];
-            else if (g >= 52) 
-                return str[50];
-            else if (g >= 48) 
-                return str[51];
-            else if (g >= 44) 
-                return str[52];
-            else if (g >= 40) 
-                return str[53];
-            else if (g >= 36) 
-                return str[54];
-            else if (g >= 32) 
-                return str[55];
-            else if (g >= 28) 
-                return str[56];
-            else if (g >= 24) 
-                return str[57];
-            else if (g >= 20) 
-                return str[58];
-            else if (g >= 16) 
-                return str[59];
-            else if (g >= 12) 
-                return str[60];
-            else if (g >= 8) 
-                return str[61];
-            else if (g >= 4) 
-                return str[62];
-            else 
-                return str[63];
+             return(strinv[(int)g]);
         }
-        else{
-            if (g >= 252) 
-                return str[63];
-            else if (g >= 248) 
-                return str[62];
-            else if (g >= 244) 
-                return str[61];
-            else if (g >= 240) 
-                return str[60];
-            else if (g >= 236) 
-                return str[59];
-            else if (g >= 232) 
-                return str[58];
-            else if (g >= 228) 
-                return str[57];
-            else if (g >= 224) 
-                return str[56];
-            else if (g >= 220) 
-                return str[55];
-            else if (g >= 216) 
-                return str[54];
-            else if (g >= 212) 
-                return str[53];
-            else if (g >= 208) 
-                return str[52];
-            else if (g >= 204) 
-                return str[51];
-            else if (g >= 200) 
-                return str[50];
-            else if (g >= 196) 
-                return str[49];
-            else if (g >= 192) 
-                return str[48];
-            else if (g >= 188) 
-                return str[47];
-            else if (g >= 184) 
-                return str[46];
-            else if (g >= 180) 
-                return str[45];
-            else if (g >= 176) 
-                return str[44];
-            else if (g >= 172) 
-                return str[43];
-            else if (g >= 168) 
-                return str[42];
-            else if (g >= 164) 
-                return str[41];
-            else if (g >= 160) 
-                return str[40];
-            else if (g >= 156) 
-                return str[39];
-            else if (g >= 152) 
-                return str[38];
-            else if (g >= 148) 
-                return str[37];
-            else if (g >= 144) 
-                return str[36];
-            else if (g >= 140) 
-                return str[35];
-            else if (g >= 136) 
-                return str[34];
-            else if (g >= 132) 
-                return str[33];
-            else if (g >= 128) 
-                return str[32];
-            else if (g >= 124) 
-                return str[31];
-            else if (g >= 120) 
-                return str[30];
-            else if (g >= 116) 
-                return str[29];
-            else if (g >= 112) 
-                return str[28];
-            else if (g >= 108) 
-                return str[27];
-            else if (g >= 104) 
-                return str[26];
-            else if (g >= 100) 
-                return str[25];
-            else if (g >= 96) 
-                return str[24];
-            else if (g >= 92) 
-                return str[23];
-            else if (g >= 88) 
-                return str[22];
-            else if (g >= 84) 
-                return str[21];
-            else if (g >= 80) 
-                return str[20];
-            else if (g >= 76) 
-                return str[19];
-            else if (g >= 72) 
-                return str[18];
-            else if (g >= 68) 
-                return str[17];
-            else if (g >= 64) 
-                return str[16];
-            else if (g >= 60) 
-                return str[15];
-            else if (g >= 56) 
-                return str[14];
-            else if (g >= 52) 
-                return str[13];
-            else if (g >= 48) 
-                return str[12];
-            else if (g >= 44) 
-                return str[11];
-            else if (g >= 40) 
-                return str[10];
-            else if (g >= 36) 
-                return str[9];
-            else if (g >= 32) 
-                return str[8];
-            else if (g >= 28) 
-                return str[7];
-            else if (g >= 24) 
-                return str[6];
-            else if (g >= 20) 
-                return str[5];
-            else if (g >= 16) 
-                return str[4];
-            else if (g >= 12) 
-                return str[3];
-            else if (g >= 8) 
-                return str[2];
-            else if (g >= 4) 
-                return str[1];
-            else 
-                return str[0];
-        }
+        else
+            return(str[(int)g]);
     }
 
     private static char decideLOW(double g){
