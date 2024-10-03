@@ -125,4 +125,5 @@ What? You want more? Alright alright. See those variables in the code? Not all o
 ⦿ Non-exposed variable can be tweaked if you're feeling adventurous. `int scaledownConstant` scales down every image by a particular amount before the main scaling process runs. Too small a number can lead higher processing time. But you do you.
 
 
+note to self. Use dithering (floyd steinberg?) to improve quality
 
